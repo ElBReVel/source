@@ -51,38 +51,38 @@ async def _human_time_duration(seconds):
 @Client.on_message(command(["start"]) & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **مرحبا {message.from_user.mention()} !**\n
+        f"""❤️ **مرحبا {message.from_user.mention()} !**\n
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **انا بوت استطيع تشغيل الموسيقى والفيديو في محادثتك الصوتية
 💡 **تعلم طريقة تشغيلي واوامر التحكم بي عن طريق  » 📚 الاوامر !**
 
-🔖 **لتعلم طريقة تشغيلي بمجموعتك اضغط على » ❓اوامر اساسيه **
+🔖 **لتعلم طريقة تشغيلي بمجموعتك اضغط على » ❤️‍🔥اوامر اساسيه **
 تم اضافتك الى جهات الاتصال في الحساب المساعد @{ASSISTANT_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ أضفني لمجموعتك ➕",
+                        "➕ أضفني لمجموعتك ",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ الاوامر الاساسيه", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("🖤 الاوامر الاساسيه", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("📚 الاوامر", callback_data="cbcmds"),
                     InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👥 كروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"
+                        " جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "𝐒𝐎𝐔𝐑𝐂𝐄 𝐓𝐄𝐏𝐓𝐇𝐎𝐍𝐄", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        " 𝒘𝒐𝒓𝒍𝒅 𝒆𝒍𝒃𝒓𝒆𝒗𝒆𝒍", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
             ]
         ),
         disable_web_page_preview=True,
     )
-    await USER.add_contact(message.from_user.id, "تيبثون العرب")
+    await USER.add_contact(message.from_user.id, "البريفيل")
 
 
 @Client.on_message(
@@ -96,9 +96,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ كروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("🖤 جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "𝐒𝐎𝐔𝐑𝐂𝐄 𝐓𝐄𝐏𝐓𝐇𝐎𝐍𝐄", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    " 𝒘𝒐𝒓𝒍𝒅 𝒆𝒍𝒃𝒓𝒆𝒗𝒆𝒍", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
